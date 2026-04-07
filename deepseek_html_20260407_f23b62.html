@@ -1,0 +1,698 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Paws & Claws Grooming | Premium Pet Spa in America</title>
+  <!-- Google Fonts + Font Awesome 6 (Free) -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,600;14..32,700;14..32,800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: #fefcf8;
+      color: #2c2a29;
+      line-height: 1.5;
+      scroll-behavior: smooth;
+    }
+
+    .container {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    /* buttons & links */
+    .btn-primary {
+      display: inline-block;
+      background-color: #e67e22;
+      color: white;
+      font-weight: 600;
+      padding: 12px 28px;
+      border-radius: 40px;
+      text-decoration: none;
+      transition: 0.3s ease;
+      border: none;
+      cursor: pointer;
+      font-size: 1rem;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+    }
+
+    .btn-primary:hover {
+      background-color: #cf711f;
+      transform: translateY(-2px);
+      box-shadow: 0 8px 20px rgba(230,126,34,0.25);
+    }
+
+    .btn-outline {
+      background: transparent;
+      border: 2px solid #e67e22;
+      color: #e67e22;
+      padding: 10px 24px;
+      border-radius: 40px;
+      font-weight: 600;
+      text-decoration: none;
+      transition: 0.2s;
+      display: inline-block;
+    }
+
+    .btn-outline:hover {
+      background: #e67e22;
+      color: white;
+    }
+
+    /* header / navbar */
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      padding: 24px 0;
+      gap: 20px;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-size: 1.8rem;
+      font-weight: 800;
+      color: #e67e22;
+    }
+
+    .logo i {
+      font-size: 2rem;
+    }
+
+    .logo span {
+      background: linear-gradient(135deg, #e67e22, #f39c12);
+      background-clip: text;
+      -webkit-background-clip: text;
+      color: transparent;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 32px;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      font-weight: 600;
+      color: #3e3a36;
+      transition: 0.2s;
+    }
+
+    .nav-links a:hover {
+      color: #e67e22;
+    }
+
+    /* Hero */
+    .hero {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 40px;
+      padding: 40px 0 60px;
+    }
+
+    .hero-content {
+      flex: 1;
+      min-width: 260px;
+    }
+
+    .hero-content h1 {
+      font-size: 3.2rem;
+      font-weight: 800;
+      line-height: 1.2;
+      color: #2c2a29;
+      margin-bottom: 20px;
+    }
+
+    .hero-content p {
+      font-size: 1.2rem;
+      color: #5e5a56;
+      margin-bottom: 32px;
+    }
+
+    .hero-image {
+      flex: 1;
+      border-radius: 32px;
+      overflow: hidden;
+      box-shadow: 0 20px 35px -12px rgba(0,0,0,0.2);
+    }
+
+    .hero-image img {
+      width: 100%;
+      height: auto;
+      display: block;
+      object-fit: cover;
+      transition: transform 0.4s;
+    }
+
+    .hero-image:hover img {
+      transform: scale(1.02);
+    }
+
+    /* section headers */
+    .section-header {
+      text-align: center;
+      margin-bottom: 48px;
+    }
+
+    .section-header h2 {
+      font-size: 2.5rem;
+      font-weight: 700;
+      color: #2c2a29;
+      margin-bottom: 12px;
+    }
+
+    .section-header p {
+      font-size: 1.1rem;
+      color: #7f8c8d;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    /* service cards */
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 32px;
+      margin-bottom: 40px;
+    }
+
+    .service-card {
+      background: white;
+      border-radius: 28px;
+      overflow: hidden;
+      box-shadow: 0 12px 24px rgba(0,0,0,0.05);
+      transition: all 0.3s;
+      text-align: center;
+      padding-bottom: 24px;
+    }
+
+    .service-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 20px 30px -8px rgba(0,0,0,0.12);
+    }
+
+    .service-card img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+
+    .service-card h3 {
+      font-size: 1.5rem;
+      margin: 20px 0 10px;
+      color: #e67e22;
+    }
+
+    .service-card p {
+      padding: 0 16px;
+      color: #5d5a58;
+    }
+
+    /* about section */
+    .about-wrap {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 48px;
+      align-items: center;
+      background: #fff9f0;
+      border-radius: 48px;
+      padding: 40px 32px;
+      margin: 40px 0;
+    }
+
+    .about-text {
+      flex: 1;
+    }
+
+    .about-text h3 {
+      font-size: 2rem;
+      margin-bottom: 20px;
+    }
+
+    .about-text p {
+      margin-bottom: 20px;
+      color: #4b4a47;
+    }
+
+    .about-img {
+      flex: 1;
+      border-radius: 32px;
+      overflow: hidden;
+      box-shadow: 0 12px 20px rgba(0,0,0,0.1);
+    }
+
+    .about-img img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    /* testimonials */
+    .testimonial-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 30px;
+      margin: 40px 0;
+    }
+
+    .testimonial {
+      background: white;
+      padding: 28px;
+      border-radius: 28px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.03);
+      border: 1px solid #f0e9de;
+    }
+
+    .testimonial i {
+      color: #f1c40f;
+      font-size: 1.6rem;
+      margin-bottom: 12px;
+    }
+
+    .testimonial p {
+      font-style: italic;
+      margin-bottom: 18px;
+      color: #2c3e2f;
+    }
+
+    .testimonial h4 {
+      font-weight: 700;
+      color: #e67e22;
+    }
+
+    /* gallery */
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 24px;
+      margin: 40px 0;
+    }
+
+    .gallery-item {
+      border-radius: 28px;
+      overflow: hidden;
+      aspect-ratio: 1 / 1;
+      box-shadow: 0 12px 20px rgba(0,0,0,0.08);
+      transition: 0.3s;
+    }
+
+    .gallery-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: 0.4s;
+    }
+
+    .gallery-item:hover img {
+      transform: scale(1.05);
+    }
+
+    /* booking form */
+    .booking-form {
+      background: linear-gradient(120deg, #fff7ed, #fff2e3);
+      border-radius: 48px;
+      padding: 48px 40px;
+      margin: 50px 0;
+      box-shadow: 0 12px 28px rgba(0,0,0,0.05);
+    }
+
+    .form-row {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 24px;
+      margin-bottom: 24px;
+    }
+
+    .input-group {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .input-group label {
+      font-weight: 600;
+      color: #3e3a36;
+    }
+
+    .input-group input, .input-group select, .input-group textarea {
+      padding: 14px 18px;
+      border: 1px solid #e2dcd2;
+      border-radius: 60px;
+      font-family: inherit;
+      background: white;
+      transition: 0.2s;
+    }
+
+    .input-group textarea {
+      border-radius: 28px;
+      resize: vertical;
+    }
+
+    .input-group input:focus, .input-group select:focus, .input-group textarea:focus {
+      outline: none;
+      border-color: #e67e22;
+      box-shadow: 0 0 0 3px rgba(230,126,34,0.2);
+    }
+
+    .btn-submit {
+      background: #e67e22;
+      width: 100%;
+      padding: 14px;
+      font-weight: 700;
+      font-size: 1.1rem;
+      border-radius: 60px;
+      margin-top: 10px;
+    }
+
+    /* footer */
+    footer {
+      background: #1f2a2e;
+      color: #ddddd0;
+      padding: 48px 0 24px;
+      margin-top: 60px;
+      border-radius: 40px 40px 0 0;
+    }
+
+    .footer-content {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 32px;
+    }
+
+    .footer-col h4 {
+      color: #f5bc70;
+      margin-bottom: 18px;
+      font-size: 1.2rem;
+    }
+
+    .footer-col p, .footer-col a {
+      color: #cfcfc0;
+      text-decoration: none;
+      line-height: 1.8;
+    }
+
+    .social-icons a {
+      font-size: 1.4rem;
+      margin-right: 16px;
+      color: #e6bc8c;
+      transition: 0.2s;
+    }
+
+    .social-icons a:hover {
+      color: #e67e22;
+    }
+
+    .copyright {
+      text-align: center;
+      margin-top: 48px;
+      padding-top: 24px;
+      border-top: 1px solid #3a494e;
+      font-size: 0.85rem;
+    }
+
+    @media (max-width: 768px) {
+      .navbar {
+        flex-direction: column;
+      }
+      .hero-content h1 {
+        font-size: 2.2rem;
+      }
+      .section-header h2 {
+        font-size: 2rem;
+      }
+      .booking-form {
+        padding: 32px 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="container">
+    <div class="navbar">
+      <div class="logo">
+        <i class="fas fa-paw"></i>
+        <span>Paws & Claws</span>
+      </div>
+      <div class="nav-links">
+        <a href="#home">Home</a>
+        <a href="#services">Services</a>
+        <a href="#about">About</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#contact">Book Now</a>
+      </div>
+    </div>
+  </div>
+</header>
+
+<main>
+  <!-- Hero Section -->
+  <div class="container" id="home">
+    <div class="hero">
+      <div class="hero-content">
+        <h1>Your fur baby deserves the <span style="color:#e67e22;">pamper session</span> of their dreams</h1>
+        <p>Professional pet grooming across America — loving care, premium products, and award-winning styles. Mobile & in-shop services available.</p>
+        <a href="#contact" class="btn-primary"><i class="fas fa-calendar-check"></i> Book a Spa Day</a>
+      </div>
+      <div class="hero-image">
+        <!-- demo image: happy dog after grooming (placedog random with fresh look) -->
+        <img src="https://placedog.net/700/500?random=101" alt="Happy groomed dog from Paws & Claws" loading="lazy">
+      </div>
+    </div>
+  </div>
+
+  <!-- Services Section -->
+  <div class="container" id="services">
+    <div class="section-header">
+      <h2>Premium Grooming Services</h2>
+      <p>Tailored for every breed — from fluffy poodles to majestic Maine Coons</p>
+    </div>
+    <div class="services-grid">
+      <div class="service-card">
+        <img src="https://placedog.net/400/300?random=201" alt="Luxury bath service demo">
+        <h3><i class="fas fa-bath"></i> Hydro Spa Bath</h3>
+        <p>Deep cleanse + massage, organic shampoos, and blow-dry for a shiny coat.</p>
+      </div>
+      <div class="service-card">
+        <img src="https://placedog.net/400/300?random=202" alt="Haircut styling">
+        <h3><i class="fas fa-cut"></i> Expert Haircut</h3>
+        <p>Breed-specific styling or custom looks, gentle scissor work & clipper finish.</p>
+      </div>
+      <div class="service-card">
+        <img src="https://placekitten.com/400/300?image=5" alt="Cat grooming demo">
+        <h3><i class="fas fa-cat"></i> Cat Grooming</h3>
+        <p>Lion cuts, deshedding, nail trim — stress-free environment for felines.</p>
+      </div>
+      <div class="service-card">
+        <img src="https://placedog.net/400/300?random=203" alt="Nail & paw care">
+        <h3><i class="fas fa-paw"></i> Pawdicure & Dental</h3>
+        <p>Nail grinding, paw balm, ear cleaning & teeth brushing for fresh breath.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- About + America vibe -->
+  <div class="container" id="about">
+    <div class="about-wrap">
+      <div class="about-text">
+        <h3>🌟 American Pet Care Excellence</h3>
+        <p>Founded in Austin, Texas, Paws & Claws Grooming brings together over 12 years of experience and a genuine love for animals. We’re certified pet stylists, fear-free certified, and use only USA-made, hypoallergenic products.</p>
+        <p>Whether you need a quick nail trim or a full-day pamper package, our boutique salon feels like a spa retreat. We treat every pet like royalty — walk-ins welcome, but appointments recommended!</p>
+        <p><i class="fas fa-map-marker-alt" style="color:#e67e22;"></i> 1234 Bark Avenue, Austin, TX + nationwide mobile service in select cities.</p>
+        <a href="#contact" class="btn-outline" style="margin-top: 12px;">Meet our groomers →</a>
+      </div>
+      <div class="about-img">
+        <img src="https://placedog.net/500/400?random=301" alt="Cozy grooming salon in America demo image">
+      </div>
+    </div>
+  </div>
+
+  <!-- Testimonials -->
+  <div class="container">
+    <div class="section-header">
+      <h2>Happy Tails, Happy Humans</h2>
+      <p>Loved by pet parents across the US</p>
+    </div>
+    <div class="testimonial-grid">
+      <div class="testimonial">
+        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+        <p>"Amazing experience! My golden retriever came back smelling like heaven and his fur is so soft. The staff is super friendly and professional. Highly recommend!"</p>
+        <h4>— Jessica M. (Denver, CO)</h4>
+      </div>
+      <div class="testimonial">
+        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+        <p>"Finally a groomer that handles my anxious rescue cat with patience. The cat grooming service is top-notch, and they even sent me photos during the session!"</p>
+        <h4>— David K. (Portland, OR)</h4>
+      </div>
+      <div class="testimonial">
+        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+        <p>"Quick, affordable, and my poodle looks like a showstopper. Love the organic products and the cute bandana they gave him. Will be back!"</p>
+        <h4>— Amanda W. (Austin, TX)</h4>
+      </div>
+    </div>
+  </div>
+
+  <!-- Gallery: demo pet grooming images -->
+  <div class="container" id="gallery">
+    <div class="section-header">
+      <h2>Grooming Gallery</h2>
+      <p>Our recent paw-some makeovers</p>
+    </div>
+    <div class="gallery-grid">
+      <div class="gallery-item">
+        <img src="https://placedog.net/400/400?random=401" alt="Groomed dog after spa">
+      </div>
+      <div class="gallery-item">
+        <img src="https://placekitten.com/400/400?image=12" alt="Fluffy cat lion cut demo">
+      </div>
+      <div class="gallery-item">
+        <img src="https://placedog.net/400/400?random=403" alt="Elegant poodle style">
+      </div>
+      <div class="gallery-item">
+        <img src="https://placedog.net/400/400?random=404" alt="Happy pup fresh haircut">
+      </div>
+    </div>
+  </div>
+
+  <!-- Booking / Contact Form Section (America) -->
+  <div class="container" id="contact">
+    <div class="booking-form">
+      <div class="section-header" style="margin-bottom: 20px;">
+        <h2>🐾 Book an Appointment</h2>
+        <p>Ready to spoil your fur baby? Fill the form and we’ll get back within 2 hours!</p>
+      </div>
+      <form id="groomingForm">
+        <div class="form-row">
+          <div class="input-group">
+            <label>Full name *</label>
+            <input type="text" id="fullname" placeholder="John Carter" required>
+          </div>
+          <div class="input-group">
+            <label>Email address *</label>
+            <input type="email" id="email" placeholder="hello@pawparent.com" required>
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="input-group">
+            <label>Pet's name *</label>
+            <input type="text" id="petname" placeholder="Buddy / Luna" required>
+          </div>
+          <div class="input-group">
+            <label>Pet type</label>
+            <select id="pettype">
+              <option>Dog (small)</option>
+              <option>Dog (medium/large)</option>
+              <option>Cat</option>
+              <option>Other small pet</option>
+            </select>
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="input-group">
+            <label>Select service *</label>
+            <select id="service" required>
+              <option>Hydro Spa Bath + Blow-dry</option>
+              <option>Full Grooming (cut + bath + nails)</option>
+              <option>Nail Trim & Paw Balm</option>
+              <option>Cat Grooming Special</option>
+              <option>Teeth Cleaning & Ear Care</option>
+            </select>
+          </div>
+          <div class="input-group">
+            <label>Preferred date *</label>
+            <input type="date" id="date" required>
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="input-group">
+            <label>Special requests (allergies / behavior)</label>
+            <textarea rows="2" placeholder="Let us know anything to make your pet comfortable..."></textarea>
+          </div>
+        </div>
+        <button type="submit" class="btn-primary btn-submit"><i class="fas fa-paw"></i> Request Appointment</button>
+        <p style="font-size: 0.8rem; text-align: center; margin-top: 20px;">📍 Servicing USA — we’ll confirm your slot via email or SMS</p>
+      </form>
+    </div>
+  </div>
+</main>
+
+<footer>
+  <div class="container">
+    <div class="footer-content">
+      <div class="footer-col">
+        <h4><i class="fas fa-paw"></i> Paws & Claws Grooming</h4>
+        <p>Premium pet salon with locations across USA.<br>📍 1234 Bark Avenue, Austin, TX 78701<br>📞 +1 (888) 427-7297<br>✉️ hello@pawsandclaws.com</p>
+      </div>
+      <div class="footer-col">
+        <h4>Hours</h4>
+        <p>Mon - Fri: 8:30am – 6:00pm<br>Saturday: 9:00am – 5:00pm<br>Sunday: Closed (mobile available)<br>Walk-ins welcome!</p>
+      </div>
+      <div class="footer-col">
+        <h4>Follow Us</h4>
+        <div class="social-icons">
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-facebook"></i></a>
+          <a href="#"><i class="fab fa-tiktok"></i></a>
+          <a href="#"><i class="fab fa-yelp"></i></a>
+        </div>
+        <p style="margin-top: 16px;">🐕 Certified groomers | 🌿 Eco-friendly</p>
+      </div>
+    </div>
+    <div class="copyright">
+      <p>© 2025 Paws & Claws Grooming — America’s trusted pet stylist. All demo images for showcase purposes.</p>
+    </div>
+  </div>
+</footer>
+
+<!-- simple form submission demo (alert) -->
+<script>
+  (function() {
+    const form = document.getElementById('groomingForm');
+    if(form) {
+      form.addEventListener('submit', function(e) {
+        e.preventDefault();
+        const name = document.getElementById('fullname')?.value.trim();
+        const pet = document.getElementById('petname')?.value.trim();
+        const service = document.getElementById('service')?.value;
+        const date = document.getElementById('date')?.value;
+        if(!name || !pet || !date) {
+          alert("🐾 Please fill in your name, pet name and preferred date before booking!");
+          return;
+        }
+        alert(`✨ Thank you ${name}! Your appointment request for ${pet} (${service}) on ${date} has been sent. Our team in America will confirm within 2 hours. 🐶❤️`);
+        form.reset();
+      });
+    }
+    // optional smooth scroll for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function(e) {
+        const targetId = this.getAttribute('href');
+        if(targetId === "#" || targetId === "") return;
+        const targetElement = document.querySelector(targetId);
+        if(targetElement) {
+          e.preventDefault();
+          targetElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      });
+    });
+  })();
+</script>
+</body>
+</html>
